@@ -1,0 +1,30 @@
+{
+  // Type-checks the self-contained modules. The three "excerpt" files listed in the
+  // README (recorder.ts, uploadQueue.ts, takeJournal.ts, worker v2/uploads.ts) import code that stays
+  // in the private repo, so they are shown for reading and are not compiled here.
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM"],
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "skipLibCheck": true,
+    "noEmit": true,
+    "paths": { "@azizan/shared": ["./packages/shared/src/types.ts"] }
+  },
+  "files": [
+    "apps/web/src/domain/ageMode.ts",
+    "apps/web/src/domain/ageMode.test.ts",
+    "apps/web/src/lib/captureSize.ts",
+    "apps/web/src/lib/captureSize.test.ts",
+    "apps/web/src/lib/pageMarks.ts",
+    "apps/web/src/lib/pageMarks.test.ts",
+    "apps/web/src/lib/updatePlan.ts",
+    "apps/web/src/lib/updatePlan.test.ts",
+    "apps/worker/src/cas.ts",
+    "apps/worker/src/cas.test.ts",
+    "apps/web/src/lib/deleteAll.ts",
+    "apps/web/src/lib/deleteAll.test.ts"
+  ]
+}
